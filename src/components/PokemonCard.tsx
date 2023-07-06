@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function PokemonCard(props: Props) {
-  const [pokemon, setPokemon] = useState({});
+  const [pokemon, setPokemon] = useState<any>({});
 
   useEffect(() => {
     fetch(props.url)
