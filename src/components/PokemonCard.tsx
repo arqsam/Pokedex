@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Pokemon } from "../common.type";
 
 interface Props {
   name: string;
@@ -6,7 +7,7 @@ interface Props {
 }
 
 export default function PokemonCard(props: Props) {
-  const [pokemon, setPokemon] = useState<any>({});
+  const [pokemon, setPokemon] = useState<Pokemon>();
 
   useEffect(() => {
     fetch(props.url)
